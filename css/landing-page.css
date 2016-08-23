@@ -177,6 +177,15 @@ p.copyright {
     margin: 0 auto;
 }
 
+.clickMe {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align:center;
+}
+
 /* Hover effect from: https://miketricking.github.io/dist/ */
 .hovereffect {
   width: 100%;
@@ -226,7 +235,7 @@ p.copyright {
   position: relative;
   font-size: 17px;
   overflow: hidden;
-  padding: 0.5em 0;
+  padding: 1em 0;
   background-color: transparent;
 }
 
@@ -249,10 +258,20 @@ p.copyright {
   transform: translate3d(0,0,0);
 }
 
-.hovereffect a, .hovereffect p {
+.hovereffect p {
   color: #FFF;
   opacity: 0;
   filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect a {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=100);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(100%,0,0);
